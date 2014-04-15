@@ -1,11 +1,33 @@
 ;; Packages
 
+(setq package-list '(ac-nrepl
+                     anti-zenburn-theme
+                     auto-complete
+                     cider
+                     clojure-mode
+                     flx-ido
+                     flycheck
+                     git-gutter
+                     paredit
+                     projectile
+                     smex
+                     rainbow-delimiters
+                     rbenv
+                     undo-tree))
+
 (require 'package)
 (add-to-list 'package-archives
     '("marmalade" . "http://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives
     '("melpa" . "http://melpa.milkbox.net/packages/"))
 (package-initialize)
+
+(unless package-archive-contents
+  (package-refresh-contents))
+
+(dolist (package package-list)
+  (unless (package-installed-p package)
+    (package-install package)))
 
 ;; No backup files (that's what version control is for)
 
@@ -17,7 +39,8 @@
 
 ;; THEMES
 
-(load-theme 'anti-zenburn t)
+(unless (equal "xterm-256color" (tty-type))
+    (load-theme 'anti-zenburn t))
 
 ;; FONTS
 
