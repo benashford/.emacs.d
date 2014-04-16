@@ -1,6 +1,7 @@
 ;; Packages
 
 (setq package-list '(ac-nrepl
+					 ack-and-a-half
                      anti-zenburn-theme
                      auto-complete
                      cider
