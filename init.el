@@ -14,7 +14,8 @@
                      smex
                      rainbow-delimiters
                      rbenv
-                     undo-tree))
+                     undo-tree
+					 yaml-mode))
 
 (require 'package)
 (add-to-list 'package-archives
