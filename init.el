@@ -1,6 +1,7 @@
 ;; Packages
 
 (setq package-list '(ac-nrepl
+                     ace-jump-mode
                      ack-and-a-half
                      ag
                      anti-zenburn-theme
@@ -159,6 +160,29 @@
 (define-key sp-keymap (kbd "H-s n") 'sp-add-to-next-sexp)
 (define-key sp-keymap (kbd "H-s j") 'sp-join-sexp)
 (define-key sp-keymap (kbd "H-s s") 'sp-split-sexp)
+
+;; Ace jump mode
+
+(autoload
+  'ace-jump-mode
+  "ace-jump-mode"
+  "Emacs quick move minor mode"
+  t)
+
+(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
+(define-key global-map (kbd "C-c C-u SPC") 'ace-jump-char-mode)
+(define-key global-map (kbd "C-c C-u C-c SPC") 'ace-jump-line-mode)
+
+(autoload
+  'ace-jump-mode-pop-mark
+  "ace-jump-mode"
+  "Ace jump back:-)"
+  t)
+
+(eval-after-load "ace-jump-mode"
+  '(ace-jump-mode-enable-mark-sync))
+
+(define-key global-map (kbd "C-x SPC") 'ace-jump-mode-pop-mark)
 
 ;;; emacs-lisp-mode
 
