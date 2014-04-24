@@ -78,7 +78,7 @@
 
 ;; whitespace
 (require 'whitespace)
-(setq whitespace-style '(face empty tabs lines-tail trailing))
+(setq whitespace-style '(face empty lines-tail trailing))
 (setq whitespace-line-column 90)
 (global-whitespace-mode t)
 
