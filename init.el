@@ -11,6 +11,7 @@
                      flx-ido
                      flycheck
                      git-gutter
+                     magit
                      paredit
                      projectile
                      smartparens
