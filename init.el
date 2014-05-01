@@ -12,8 +12,10 @@
                      flycheck
                      git-gutter
                      magit
+                     markdown-mode
                      paredit
                      projectile
+                     puppet-mode
                      smartparens
                      smex
                      rainbow-delimiters
