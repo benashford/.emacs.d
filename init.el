@@ -19,7 +19,6 @@
                      smartparens
                      smex
                      rainbow-delimiters
-                     rbenv
                      undo-tree
                      yaml-mode))
 
@@ -59,7 +58,6 @@
 (display-time-mode 1)
 (column-number-mode)
 (size-indication-mode)
-(global-rbenv-mode)
 
 (require 'flx-ido)
 (ido-mode t)
