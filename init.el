@@ -4,10 +4,10 @@
                      ace-jump-mode
                      ack-and-a-half
                      ag
-                     anti-zenburn-theme
                      auto-complete
                      cider
                      clojure-mode
+                     color-theme-sanityinc-tomorrow
                      flx-ido
                      flycheck
                      git-gutter
@@ -47,9 +47,7 @@
 
 ;; THEMES
 
-;; no theme
-;; (unless (equal "xterm-256color" (tty-type))
-;;     (load-theme 'anti-zenburn t))
+(load-theme 'sanityinc-tomorrow-bright t)
 
 ;; FONTS
 
