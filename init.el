@@ -13,6 +13,7 @@
                      git-gutter
                      magit
                      markdown-mode
+                     mustache-mode
                      paredit
                      projectile
                      puppet-mode
