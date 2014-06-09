@@ -5,6 +5,7 @@
                      ack-and-a-half
                      ag
                      auto-complete
+                     browse-kill-ring
                      cider
                      clojure-mode
                      clojure-test-mode
@@ -271,6 +272,10 @@
 (unless (getenv "TMUX")
   (setq interprogram-cut-function 'paste-to-osx)
   (setq interprogram-paste-function 'copy-from-osx))
+
+;; kill-ring
+(require 'browse-kill-ring)
+(browse-kill-ring-default-keybindings)
 
 ;; uniquify
 (require 'uniquify)
