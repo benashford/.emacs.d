@@ -8,7 +8,6 @@
                      browse-kill-ring
                      cider
                      clojure-mode
-                     clojure-test-mode
                      color-theme-sanityinc-tomorrow
                      flx-ido
                      flycheck
