@@ -207,6 +207,10 @@
 
 (add-to-list 'auto-mode-alist '("\\.boot$" . clojure-mode))
 
+;;; mustache-mode
+
+(require 'mustache-mode)
+
 ;; midje mode no key hijacking
 
 (defun disable-midje-keys ()
