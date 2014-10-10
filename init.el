@@ -12,6 +12,7 @@
                      flx-ido
                      flycheck
                      git-gutter
+                     go-mode
                      magit
                      markdown-mode
                      mustache-mode
