@@ -7,6 +7,7 @@
                      auto-complete
                      browse-kill-ring
                      cider
+                     clj-refactor
                      clojure-mode
                      color-theme-sanityinc-tomorrow
                      flx-ido
@@ -208,15 +209,22 @@
 
 (add-to-list 'auto-mode-alist '("\\.boot$" . clojure-mode))
 
-;;; mustache-mode
+;; clj-refactor
 
-(require 'mustache-mode)
+(require 'clj-refactor)
+(add-hook 'clojure-mode-hook (lambda ()
+                               (clj-refactor-mode 1)
+                               (cljr-add-keybindings-with-prefix "C-c C-m")))
 
 ;; midje mode no key hijacking
 
 (defun disable-midje-keys ()
   (define-key midje-mode-map "\C-c" nil))
 (add-hook 'midje-mode-hook 'disable-midje-keys)
+
+;;; mustache-mode
+
+(require 'mustache-mode)
 
 ;;; cider-mode
 
