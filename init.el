@@ -23,6 +23,7 @@
                      puppet-mode
                      smex
                      rainbow-delimiters
+                     rust-mode
                      undo-tree
                      yaml-mode))
 
