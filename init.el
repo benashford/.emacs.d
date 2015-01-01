@@ -17,6 +17,7 @@
                      magit
                      markdown-mode
                      mustache-mode
+                     noctilux-theme
                      paredit
                      projectile
                      puppet-mode
@@ -49,7 +50,9 @@
 
 ;; THEMES
 
-(load-theme 'sanityinc-tomorrow-bright t)
+(if (equal "xterm-256color" (tty-type))
+  (load-theme 'sanityinc-tomorrow-bright t)
+  (load-theme noctilux t))
 
 ;; FONTS
 
