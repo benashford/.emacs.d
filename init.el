@@ -53,7 +53,7 @@
 
 (if (equal "xterm-256color" (tty-type))
   (load-theme 'sanityinc-tomorrow-bright t)
-  (load-theme noctilux t))
+  (load-theme 'noctilux t))
 
 ;; FONTS
 
