@@ -14,6 +14,7 @@
                      flycheck
                      git-gutter
                      go-mode
+                     lua-mode
                      magit
                      markdown-mode
                      mustache-mode
