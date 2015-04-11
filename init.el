@@ -26,6 +26,7 @@
                      rainbow-delimiters
                      rust-mode
                      undo-tree
+                     web-mode
                      yaml-mode))
 
 (require 'package)
@@ -186,6 +187,11 @@
 (add-hook 'cider-repl-mode-hook 'ac-cider-setup)
 (eval-after-load "auto-complete"
   '(add-to-list 'ac-modes 'cider-mode))
+
+;;; web-mode
+
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
 
 ;; KEYS
 
