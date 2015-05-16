@@ -248,3 +248,6 @@
 ;; uniquify
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'post-forward)
+
+;; Fix for the search weirdness
+(add-hook 'isearch-update-post-hook 'redraw-display)
