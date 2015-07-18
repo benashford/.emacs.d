@@ -1,15 +1,14 @@
 ;; Packages
 
-(setq package-list '(ac-cider
-                     ace-jump-mode
+(setq package-list '(ace-jump-mode
                      ack-and-a-half
                      ag
-                     auto-complete
                      browse-kill-ring
                      cider
                      clj-refactor
                      clojure-mode
                      color-theme-sanityinc-tomorrow
+                     company
                      flx-ido
                      flycheck
                      git-gutter
@@ -92,10 +91,6 @@
 ;; uniquify
 (require 'uniquify)
 
-;;; auto-complete
-(require 'auto-complete-config)
-(ac-config-default)
-
 ;;; flycheck
 
 (add-hook 'after-init-hook #'global-flycheck-mode)
@@ -113,6 +108,9 @@
 (set-face-background 'git-gutter:separator "color-233")
 
 (setq git-gutter:hide-gutter t)
+
+;; Company mode
+(add-hook 'after-init-hook 'global-company-mode)
 
 ;; Ace jump mode
 
@@ -181,13 +179,6 @@
 (add-hook 'cider-repl-mode-hook 'paredit-mode)
 (add-hook 'cider-repl-mode-hook 'rainbow-delimiters-mode)
 
-(require 'ac-cider)
-(add-hook 'cider-mode-hook 'ac-flyspell-workaround)
-(add-hook 'cider-mode-hook 'ac-cider-setup)
-(add-hook 'cider-repl-mode-hook 'ac-cider-setup)
-(eval-after-load "auto-complete"
-  '(add-to-list 'ac-modes 'cider-mode))
-
 ;;; web-mode
 
 (require 'web-mode)
@@ -250,4 +241,5 @@
 (setq uniquify-buffer-name-style 'post-forward)
 
 ;; Fix for the search weirdness
-(add-hook 'isearch-update-post-hook 'redraw-display)
+(if (equal "xterm-256color" (tty-type))
+    (add-hook 'isearch-update-post-hook 'redraw-display))
