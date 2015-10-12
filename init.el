@@ -163,6 +163,17 @@
   (define-key midje-mode-map "\C-c" nil))
 (add-hook 'midje-mode-hook 'disable-midje-keys)
 
+;;; clj-refactor-mode
+
+(require 'clj-refactor)
+
+(defun my-clojure-mode-hook ()
+  (clj-refactor-mode 1)
+  (yas-minor-mode 1) ; for adding require/use/import
+  (cljr-add-keybindings-with-prefix "C-c C-m"))
+
+(add-hook 'clojure-mode-hook #'my-clojure-mode-hook)
+
 ;;; mustache-mode
 
 (require 'mustache-mode)
