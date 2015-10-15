@@ -12,6 +12,7 @@
                      flx-ido
                      flycheck
                      git-gutter
+                     git-timemachine
                      go-mode
                      lua-mode
                      magit
