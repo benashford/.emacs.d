@@ -188,6 +188,9 @@
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
 
+;;; JavaScript mode
+(setq js-indent-level 2)
+
 ;; KEYS
 
 (fset 'insertHash
