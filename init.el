@@ -9,6 +9,8 @@
                      clojure-mode
                      color-theme-sanityinc-tomorrow
                      company
+                     docker
+                     dockerfile-mode
                      flx-ido
                      flycheck
                      git-gutter
