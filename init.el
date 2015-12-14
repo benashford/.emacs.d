@@ -1,7 +1,6 @@
 ;; Packages
 
 (setq package-list '(ace-jump-mode
-                     ack-and-a-half
                      ag
                      browse-kill-ring
                      cider
@@ -33,9 +32,12 @@
 
 (require 'package)
 (add-to-list 'package-archives
-    '("marmalade" . "http://marmalade-repo.org/packages/"))
+             '("gnu" . "https://elpa.gnu.org/packages/"))
 (add-to-list 'package-archives
-    '("melpa" . "http://melpa.milkbox.net/packages/"))
+             '("melpa" . "https://melpa.milkbox.net/packages/"))
+(add-to-list 'package-archives
+             '("melpa-stable" . "https://stable.melpa.org/packages/"))
+
 (package-initialize)
 
 (unless package-archive-contents
