@@ -255,3 +255,6 @@
 ;; Fix for the search weirdness
 (if (equal "xterm-256color" (tty-type))
     (add-hook 'isearch-update-post-hook 'redraw-display))
+
+;; No startup screen
+(setq inhibit-startup-screen t)
