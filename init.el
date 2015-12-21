@@ -215,8 +215,9 @@
 
 (when (equal "xterm-256color" (tty-type))
   (define-key input-decode-map "\e[1;2A" [S-up])
-  (xterm-mouse-mode t)
-  (menu-bar-mode 0))
+  (xterm-mouse-mode t))
+
+(menu-bar-mode 0)
 
 (windmove-default-keybindings)
 
