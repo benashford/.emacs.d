@@ -63,9 +63,7 @@
 
 ;; FONTS
 
-(set-face-attribute 'default nil :family "PragmataPro" :height 130)
-
-;; MODES
+(set-face-attribute 'default nil :family "Fantasque Sans Mono" :height 115)
 
 (setq display-time-24hr-format t)
 (display-time-mode 1)
@@ -242,8 +240,9 @@
       (process-send-eof proc))))
 
 (unless (getenv "TMUX")
-  (setq interprogram-cut-function 'paste-to-osx)
-  (setq interprogram-paste-function 'copy-from-osx))
+  (when (eq system-type 'darwin)
+    (setq interprogram-cut-function 'paste-to-osx)
+    (setq interprogram-paste-function 'copy-from-osx)))
 
 ;; kill-ring
 (require 'browse-kill-ring)
