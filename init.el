@@ -19,7 +19,6 @@
                      magit
                      markdown-mode
                      mustache-mode
-                     noctilux-theme
                      paredit
                      projectile
                      puppet-mode
@@ -57,13 +56,16 @@
 
 ;; THEMES
 
-(if (equal "xterm-256color" (tty-type))
+(if (and (eq system-type 'darwin)
+         (equal "xterm-256color" (tty-type)))
   (load-theme 'sanityinc-tomorrow-bright t)
-  (load-theme 'noctilux t))
+  (load-theme 'sanityinc-tomorrow-night t))
 
 ;; FONTS
 
-(set-face-attribute 'default nil :family "Fantasque Sans Mono" :height 115)
+(if (eq system-type 'darwin)
+  (set-face-attribute 'default nil :family "PragmataPro" :height 130)
+  (set-face-attribute 'default nil :family "Fantasque Sans Mono" :height 115))
 
 (setq display-time-24hr-format t)
 (display-time-mode 1)
