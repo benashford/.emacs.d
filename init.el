@@ -161,6 +161,7 @@
 (add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
 
 (add-to-list 'auto-mode-alist '("\\.boot$" . clojure-mode))
+(add-to-list 'magic-mode-alist '(".* boot" . clojure-mode))
 
 ;; midje mode no key hijacking
 
