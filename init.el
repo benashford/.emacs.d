@@ -19,6 +19,7 @@
                      magit
                      markdown-mode
                      mustache-mode
+                     nginx-mode
                      paredit
                      projectile
                      puppet-mode
