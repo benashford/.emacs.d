@@ -15,6 +15,8 @@
                      git-gutter
                      git-timemachine
                      go-mode
+                     julia-mode
+                     julia-shell
                      lua-mode
                      magit
                      markdown-mode
@@ -57,8 +59,7 @@
 
 ;; THEMES
 
-(if (and (eq system-type 'darwin)
-         (equal "xterm-256color" (tty-type)))
+(if (equal "xterm-256color" (tty-type))
   (load-theme 'sanityinc-tomorrow-bright t)
   (load-theme 'sanityinc-tomorrow-night t))
 
