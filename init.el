@@ -14,6 +14,7 @@
                      flycheck
                      git-gutter
                      git-timemachine
+                     groovy-mode
                      go-mode
                      julia-mode
                      julia-shell
@@ -156,6 +157,9 @@
 
 (add-to-list 'auto-mode-alist '("Rakefile\\'" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Gemfile\\'" . ruby-mode))
+
+;;; groovy-mode
+(add-to-list 'auto-mode-alist '("Jenkinsfile``'" . groovy-mode))
 
 ;;; clojure-mode
 
