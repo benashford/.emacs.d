@@ -159,7 +159,7 @@
 (add-to-list 'auto-mode-alist '("Gemfile\\'" . ruby-mode))
 
 ;;; groovy-mode
-(add-to-list 'auto-mode-alist '("Jenkinsfile``'" . groovy-mode))
+(add-to-list 'auto-mode-alist '("Jenkinsfile\\'" . groovy-mode))
 
 ;;; clojure-mode
 
